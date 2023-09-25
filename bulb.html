@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb On and Off</title>
+    <style>
+        .bulb-container{
+            margin: 10px;
+            height: auto;
+            display: inline-block; /* Display images side by side */
+        }
+        
+        /* Add a class to control the size of the images */
+        .small-image {
+            width: 100px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+    </style>
+</head>
+<body>
+    <h3>Here is My Bulb Control</h3>
+    <button onclick="turnOff()">Turn Off</button>
+    <button onclick="turnOn()">Turn On</button>
+
+    <!-- Use the "small-image" class to control the image size -->
+    <div class="bulb-container">
+        <img  id="imgOff" src="Bulb_OFF.jpg" alt="" srcset="" class="small-image">
+    </div>
+    
+    <script>
+        const turnOn = () => {
+            let imgOb = document.getElementById("imgOff");
+            imgOb.setAttribute('src', 'Bulb_ON.jpg');
+        };
+
+        const turnOff = () => {
+            let imgOb = document.getElementById("imgOff");
+            imgOb.setAttribute('src', 'Bulb_OFF.jpg');
+        };
+    </script>
+</body>
+</html>
